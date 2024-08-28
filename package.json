@@ -1,0 +1,36 @@
+{
+  "name": "ink",
+  "version": "1.0.0",
+  "description": "A lib to write beautiful colored logs.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikitazanella/ink.git"
+  },
+  "keywords": [
+    "log",
+    "color",
+    "console"
+  ],
+  "author": "Nikita Zanella",
+  "license": "ISC"
+}
