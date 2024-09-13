@@ -1,6 +1,6 @@
 {
-  "name": "@nktzln/ink",
-  "version": "1.0.0",
+  "name": "@nktznl/ink",
+  "version": "0.0.1",
   "description": "Ink is a lightweight TypeScript library that allows users to create beautiful colorized console.log outputs using ANSI escape codes.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nikitazanella/ink.git"
+    "url": "git+https://github.com/nktznl/ink.git"
   },
   "keywords": [
     "log",

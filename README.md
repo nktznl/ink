@@ -4,6 +4,8 @@ Ink is a lightweight TypeScript library that allows users to create beautiful co
 
 ## Installation
 
+npmjs: https://www.npmjs.com/package/@nktznl/ink
+
 To install Ink, you can use npm or yarn:
 
 ```sh
