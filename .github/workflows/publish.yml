@@ -1,31 +1,22 @@
-name: Publish Package to npmjs
+name: Publish to NPM
 on:
   release:
-    types:
-      - published
+    types: [created]
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      # Ensure package-lock.json is present
-      - name: Check for package-lock.json
-        run: |
-          if [ ! -f package-lock.json ]; then
-            echo "package-lock.json not found, generating it..."
-            npm install
-          fi
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: "20.x"
+          node-version: "14.x"
           registry-url: "https://registry.npmjs.org"
-          scope: "@nktznl"
-      - run: npm ci
-      - run: npm publish --provenance --access public
+      - name: Install dependencies and build 🔧
+        run: npm ci && npm run build && npm run test
+      - name: Publish package on NPM 📦
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
