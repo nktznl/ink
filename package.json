@@ -1,5 +1,5 @@
 {
-  "name": "ink",
+  "name": "@nktzln/ink",
   "version": "1.0.0",
   "description": "Ink is a lightweight TypeScript library that allows users to create beautiful colorized console.log outputs using ANSI escape codes.",
   "main": "./dist/index.js",
