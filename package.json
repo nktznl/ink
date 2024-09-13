@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^22.5.0",
+    "husky": "^9.1.6",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
@@ -20,7 +21,12 @@
   "scripts": {
     "build": "tsup",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "precommit": "npm run build && npm test",
+    "version-minor": "npm version minor",
+    "version-major": "npm version major",
+    "version-patch": "npm version patch",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
