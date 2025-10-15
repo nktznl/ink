@@ -103,13 +103,11 @@ const handler: ProxyHandler<{ colors: string[] }> = {
  * @example
  * console.log(ink.red.bgWhite.text("This is red text on a white background"));
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ink = new Proxy({ colors: [] }, handler) as any;
 
 /**
  * Predefined color themes for common use cases.
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const themes = {
 	success: (ink as any).green,
 	error: (ink as any).red,
