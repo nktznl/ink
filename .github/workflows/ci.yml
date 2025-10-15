@@ -55,10 +55,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Debug npm auth
-        run: |
-          echo "Checking npm authentication..."
-          npm whoami
-          echo "Checking token permissions..."
-          npm config list
