@@ -1,7 +1,7 @@
 {
 	"name": "@nktznl/ink",
 	"type": "module",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "A lightweight, powerful TypeScript library for creating beautiful colorized console output with ANSI escape codes. Features chaining, themes, styles, and advanced effects.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
