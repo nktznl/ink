@@ -56,7 +56,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Publish to NPM
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Debug npm auth
+        run: |
+          echo "Checking npm authentication..."
+          npm whoami
+          echo "Checking token permissions..."
+          npm config list
